@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -25,12 +26,25 @@ export default {
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
 				primary: {
-					DEFAULT: 'hsl(var(--primary))',
-					foreground: 'hsl(var(--primary-foreground))'
+					DEFAULT: '#2a1758', // Deep purple
+					foreground: '#ffffff', // White
+					100: '#3a2768', // Lighter purple (accent)
+					200: '#4a3778',
+					300: '#5a4788',
 				},
 				secondary: {
-					DEFAULT: 'hsl(var(--secondary))',
-					foreground: 'hsl(var(--secondary-foreground))'
+					DEFAULT: '#f8c156', // Bright orange-yellow
+					foreground: '#333333', // Dark gray
+					100: '#fad17a', // Lighter orange-yellow (accent)
+					200: '#fce09e',
+					300: '#fdefb2',
+				},
+				neutral: {
+					DEFAULT: '#f5f5f5', // Light gray
+					100: '#f9f9f9', // Lighter gray
+					200: '#eeeeee',
+					800: '#333333', // Dark gray (text)
+					900: '#1f103f', // Dark footer background
 				},
 				destructive: {
 					DEFAULT: 'hsl(var(--destructive))',
@@ -63,6 +77,9 @@ export default {
 					ring: 'hsl(var(--sidebar-ring))'
 				}
 			},
+			fontFamily: {
+				'sans': ['"Noto Sans JP"', 'sans-serif'],
+			},
 			borderRadius: {
 				lg: 'var(--radius)',
 				md: 'calc(var(--radius) - 2px)',
@@ -84,11 +101,31 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'typing': {
+					from: { width: '0' },
+					to: { width: '100%' }
+				},
+				'blink-caret': {
+					'from, to': { borderColor: 'transparent' },
+					'50%': { borderColor: '#f8c156' }
+				},
+				'float': {
+					'0%, 100%': { transform: 'translateY(0)' },
+					'50%': { transform: 'translateY(-10px)' }
+				},
+				'fade-in': {
+					'0%': { opacity: '0', transform: 'translateY(10px)' },
+					'100%': { opacity: '1', transform: 'translateY(0)' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'typing': 'typing 3.5s steps(40, end)',
+				'blink-caret': 'blink-caret 0.75s step-end infinite',
+				'float': 'float 6s ease-in-out infinite',
+				'fade-in': 'fade-in 0.5s ease-out'
 			}
 		}
 	},
