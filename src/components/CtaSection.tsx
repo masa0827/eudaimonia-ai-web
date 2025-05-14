@@ -1,12 +1,13 @@
 
 import { Button } from "@/components/ui/button";
+import { ArrowRight } from "lucide-react";
 
 const CtaSection = () => {
   return (
     <section className="py-16 md:py-24 bg-primary relative overflow-hidden">
       <div className="section-divider gray-to-purple"></div>
       
-      {/* Isometric grid background */}
+      {/* アイソメトリックグリッド背景 */}
       <div className="absolute inset-0 isometric-grid opacity-20"></div>
       
       <div className="container mx-auto px-4 md:px-6 pt-12 relative z-10">
@@ -19,8 +20,9 @@ const CtaSection = () => {
             あなたのビジネスの可能性を広げましょう。
             まずは無料相談から始めてみませんか？
           </p>
-          <Button className="bg-secondary text-neutral-800 hover:bg-secondary-100 text-lg py-6 px-8">
+          <Button className="bg-secondary text-neutral-800 hover:bg-secondary-100 text-lg py-6 px-8 flex items-center mx-auto">
             無料相談を予約する
+            <ArrowRight className="ml-2 h-5 w-5" />
           </Button>
         </div>
       </div>

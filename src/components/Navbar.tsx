@@ -24,7 +24,7 @@ const Navbar = () => {
     <nav className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-white shadow-md py-2' : 'bg-transparent py-4'}`}>
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex justify-between items-center">
-          {/* Logo */}
+          {/* ロゴ */}
           <div className="flex items-center">
             <a href="#" className="flex items-end">
               <h1 className="text-xl md:text-2xl font-bold text-primary">
@@ -34,7 +34,7 @@ const Navbar = () => {
             </a>
           </div>
 
-          {/* Desktop Navigation */}
+          {/* デスクトップナビゲーション */}
           <div className="hidden md:flex items-center space-x-6">
             <a href="#services" className="text-neutral-800 hover:text-primary transition-colors duration-200">サービス</a>
             <a href="#about" className="text-neutral-800 hover:text-primary transition-colors duration-200">私たちについて</a>
@@ -45,7 +45,7 @@ const Navbar = () => {
             </Button>
           </div>
 
-          {/* Mobile Menu Button */}
+          {/* モバイルメニューボタン */}
           <button 
             className="md:hidden text-neutral-800"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -54,7 +54,7 @@ const Navbar = () => {
           </button>
         </div>
 
-        {/* Mobile Navigation */}
+        {/* モバイルナビゲーション */}
         {isMobileMenuOpen && (
           <div className="md:hidden mt-4 pb-4 bg-white">
             <div className="flex flex-col space-y-3">

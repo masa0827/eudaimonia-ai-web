@@ -1,4 +1,6 @@
 
+import { ArrowRight } from "lucide-react";
+
 const processSteps = [
   {
     number: 1,
@@ -36,30 +38,36 @@ const ProcessSection = () => {
           </p>
         </div>
         
-        {/* Process Steps */}
+        {/* プロセスステップ */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-4">
           {processSteps.map((step, index) => (
             <div 
               key={step.number} 
-              className="relative flex flex-col items-center"
+              className="relative flex flex-col items-center bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300"
             >
-              {/* Step Number with Isometric Design */}
+              {/* ステップ番号をアイソメトリックデザインで */}
               <div className="relative mb-6">
                 <div className="w-16 h-16 bg-primary/10 rounded transform rotate-45 absolute top-0 left-0"></div>
                 <div className="w-16 h-16 flex items-center justify-center relative z-10">
                   <span className="text-2xl font-bold text-primary">{step.number}</span>
                 </div>
                 
-                {/* Connection line */}
+                {/* 接続線 */}
                 {index < processSteps.length - 1 && (
                   <div className="hidden md:block absolute top-8 left-16 w-full h-0.5 bg-secondary/30"></div>
                 )}
               </div>
               
-              {/* Step Content */}
+              {/* ステップ内容 */}
               <div className="text-center">
                 <h3 className="text-lg font-bold mb-2 text-primary">{step.title}</h3>
-                <p className="text-neutral-700">{step.description}</p>
+                <p className="text-neutral-700 mb-4">{step.description}</p>
+                
+                {/* 詳細リンク */}
+                <a href="#contact" className="inline-flex items-center text-primary hover:text-primary-100 transition-colors text-sm font-medium">
+                  詳しく見る
+                  <ArrowRight className="ml-1 h-4 w-4" />
+                </a>
               </div>
             </div>
           ))}

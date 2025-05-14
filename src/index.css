@@ -107,7 +107,7 @@
   .typed-text {
     overflow: hidden;
     white-space: nowrap;
-    border-right: 3px solid #f8c156;
+    border-right: 3px solid #FFA733;
     margin: 0 auto;
   }
   
@@ -136,7 +136,7 @@
   }
   
   .white-to-purple::before {
-    background-color: #2a1758;
+    background-color: #2F1676;
   }
   
   .purple-to-white::before {
@@ -148,7 +148,7 @@
   }
   
   .gray-to-purple::before {
-    background-color: #2a1758;
+    background-color: #2F1676;
   }
   
   .isometric-card {

@@ -1,7 +1,8 @@
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { ArrowRight } from "lucide-react";
 
-// Create service data
+// サービスデータを作成
 const services = [
   {
     id: 1,
@@ -53,10 +54,10 @@ const ServicesSection = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {services.map((service) => (
             <div key={service.id} className="flex">
-              <Card className="isometric-card border-2 border-neutral-100 shadow-lg w-full">
+              <Card className="isometric-card border-2 border-neutral-100 shadow-lg w-full hover:shadow-xl transition-all duration-300">
                 <CardHeader>
                   <div className="w-16 h-16 bg-primary/10 rounded-lg flex items-center justify-center mb-4 isometric-icon">
-                    {/* Isometric Icon */}
+                    {/* アイソメトリックアイコン */}
                     {service.icon === "data-analysis" && (
                       <div className="w-10 h-10 relative">
                         <div className="absolute inset-0 bg-primary/20 rounded transform rotate-45"></div>
@@ -84,14 +85,18 @@ const ServicesSection = () => {
                   <CardDescription className="text-neutral-600">{service.description}</CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <ul className="space-y-2">
+                  <ul className="space-y-2 mb-4">
                     {service.benefits.map((benefit, index) => (
                       <li key={index} className="flex items-start">
-                        <div className="mr-2 mt-1 w-1.5 h-1.5 bg-secondary rounded-full"></div>
+                        <div className="mr-2 mt-1 w-1.5 h-1.5 bg-secondary rounded-full flex-shrink-0"></div>
                         <span className="text-neutral-700">{benefit}</span>
                       </li>
                     ))}
                   </ul>
+                  <a href="#contact" className="inline-flex items-center text-primary hover:text-primary-100 transition-colors text-sm font-medium">
+                    詳しく見る
+                    <ArrowRight className="ml-1 h-4 w-4" />
+                  </a>
                 </CardContent>
               </Card>
             </div>

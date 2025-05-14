@@ -26,25 +26,25 @@ export default {
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
 				primary: {
-					DEFAULT: '#2a1758', // Deep purple
-					foreground: '#ffffff', // White
-					100: '#3a2768', // Lighter purple (accent)
-					200: '#4a3778',
-					300: '#5a4788',
+					DEFAULT: '#2F1676', // より明るい紫
+					foreground: '#ffffff', // 白
+					100: '#3F2686', // やや明るい紫
+					200: '#4F3696', // より明るい紫
+					300: '#5F46A6', // さらに明るい紫
 				},
 				secondary: {
-					DEFAULT: '#f8c156', // Bright orange-yellow
-					foreground: '#333333', // Dark gray
-					100: '#fad17a', // Lighter orange-yellow (accent)
-					200: '#fce09e',
-					300: '#fdefb2',
+					DEFAULT: '#FFA733', // より明るいオレンジ
+					foreground: '#333333', // ダークグレー
+					100: '#FFB753', // やや明るいオレンジ
+					200: '#FFC773', // より明るいオレンジ
+					300: '#FFD793', // さらに明るいオレンジ
 				},
 				neutral: {
-					DEFAULT: '#f5f5f5', // Light gray
-					100: '#f9f9f9', // Lighter gray
+					DEFAULT: '#f5f5f5', // ライトグレー
+					100: '#f9f9f9', // よりライトなグレー
 					200: '#eeeeee',
-					800: '#333333', // Dark gray (text)
-					900: '#1f103f', // Dark footer background
+					800: '#333333', // ダークグレー (テキスト)
+					900: '#1D0B5F', // 濃い紫（フッター背景）
 				},
 				destructive: {
 					DEFAULT: 'hsl(var(--destructive))',
