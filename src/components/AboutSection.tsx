@@ -7,12 +7,12 @@ const AboutSection = () => {
     <section id="about" className="py-16 md:py-24 bg-neutral">
       <div className="container mx-auto px-4 md:px-6 pt-12">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          {/* アイソメトリックチームイラスト */}
+          {/* イラスト要素 */}
           <div className="order-2 lg:order-1 relative mx-auto w-full max-w-md h-96">
-            {/* ビル */}
-            <div className="absolute left-10 bottom-0 w-16 h-48 bg-primary/20 transform perspective-800 rotateX(10deg) rotateY(-30deg)"></div>
-            <div className="absolute left-24 bottom-0 w-20 h-64 bg-secondary/20 transform perspective-800 rotateX(10deg) rotateY(-30deg)"></div>
-            <div className="absolute left-40 bottom-0 w-24 h-32 bg-primary/10 transform perspective-800 rotateX(10deg) rotateY(-30deg)"></div>
+            {/* チームのビジュアル要素 */}
+            <div className="absolute left-10 bottom-0 w-16 h-48 bg-primary/20"></div>
+            <div className="absolute left-24 bottom-0 w-20 h-64 bg-secondary/20"></div>
+            <div className="absolute left-40 bottom-0 w-24 h-32 bg-primary/10"></div>
             
             {/* チームシルエット */}
             <div className="absolute bottom-0 left-20 w-12 h-24 bg-primary/30 rounded-t-full"></div>
@@ -25,8 +25,8 @@ const AboutSection = () => {
             
             {/* 抽象的要素 */}
             <div className="absolute top-20 left-24 w-20 h-20 rounded-full bg-secondary/10 animate-float"></div>
-            <div className="absolute top-10 left-48 w-16 h-16 rounded-md bg-primary/20 transform rotate-12 animate-float"></div>
-            <div className="absolute top-40 left-10 w-12 h-12 rounded-md bg-secondary/30 transform -rotate-12 animate-float"></div>
+            <div className="absolute top-10 left-48 w-16 h-16 rounded-md bg-primary/20 animate-float"></div>
+            <div className="absolute top-40 left-10 w-12 h-12 rounded-md bg-secondary/30 animate-float"></div>
           </div>
           
           {/* コンテンツ */}

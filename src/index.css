@@ -97,13 +97,6 @@
 }
 
 @layer components {
-  .isometric-grid {
-    background-image: linear-gradient(#3a276810 1px, transparent 1px),
-                     linear-gradient(90deg, #3a276810 1px, transparent 1px);
-    background-size: 20px 20px;
-    transform: perspective(500px) rotateX(60deg);
-  }
-  
   .typed-text {
     overflow: hidden;
     white-space: nowrap;
@@ -115,16 +108,13 @@
     padding: 4rem 0;
   }
   
-  .isometric-card {
-    transform: perspective(1000px) rotateX(5deg) rotateY(5deg);
-    transition: transform 0.3s ease;
+  .card-hover {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
   
-  .isometric-card:hover {
-    transform: perspective(1000px) rotateX(0deg) rotateY(0deg) translateY(-5px);
-  }
-  
-  .isometric-icon {
-    transform: perspective(500px) rotateX(10deg) rotateY(10deg);
+  .card-hover:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
   }
 }
+

@@ -70,20 +70,20 @@ const ServicesSection = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {services.map((service) => (
             <div key={service.id} className="flex">
-              <Card className="border-2 border-neutral-100 shadow-lg w-full hover:shadow-xl transition-all duration-300">
+              <Card className="w-full border border-neutral-100 shadow-sm hover:shadow-md transition-all duration-300">
                 <CardHeader>
                   <div className="w-16 h-16 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
                     {/* サービスアイコン */}
                     {service.icon === "data-analysis" && (
                       <div className="w-10 h-10 relative">
-                        <div className="absolute inset-0 bg-primary/20 rounded transform rotate-45"></div>
-                        <div className="absolute inset-1 bg-secondary/30 rounded-sm transform rotate-12"></div>
+                        <div className="absolute inset-0 bg-primary/20 rounded"></div>
+                        <div className="absolute inset-1 bg-secondary/30 rounded-sm"></div>
                         <div className="absolute bottom-1 right-1 w-4 h-4 bg-primary rounded-full"></div>
                       </div>
                     )}
                     {service.icon === "content-generation" && (
                       <div className="w-10 h-10 relative">
-                        <div className="absolute inset-0 bg-secondary/20 rounded transform rotate-12"></div>
+                        <div className="absolute inset-0 bg-secondary/20 rounded"></div>
                         <div className="absolute top-1 left-1 w-4 h-4 bg-primary rounded-sm"></div>
                         <div className="absolute bottom-1 right-1 w-6 h-3 bg-primary/40 rounded-full"></div>
                       </div>
@@ -91,7 +91,7 @@ const ServicesSection = () => {
                     {service.icon === "strategy" && (
                       <div className="w-10 h-10 relative">
                         <div className="absolute inset-0 bg-primary/30 rounded"></div>
-                        <div className="absolute inset-2 bg-secondary/20 rounded-sm transform rotate-45"></div>
+                        <div className="absolute inset-2 bg-secondary/20 rounded-sm"></div>
                         <div className="absolute top-2 left-2 w-3 h-3 bg-white/80 rounded-full"></div>
                       </div>
                     )}
@@ -128,32 +128,32 @@ const ServicesSection = () => {
           </h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-white p-6 rounded-lg shadow border border-neutral-100">
+            <div className="bg-white p-6 rounded-lg shadow-sm border border-neutral-100">
               <h3 className="text-xl font-bold mb-2 text-primary">幅広い予算に対応</h3>
               <p>20万〜300万円の幅広い予算に対応 – 中小からエンタープライズまで最適設計。</p>
             </div>
             
-            <div className="bg-white p-6 rounded-lg shadow border border-neutral-100">
+            <div className="bg-white p-6 rounded-lg shadow-sm border border-neutral-100">
               <h3 className="text-xl font-bold mb-2 text-primary">コスト削減</h3>
               <p>AI & ノーコードでコスト30〜40%削減 – LPやバナー制作費 15万円 → 4万円の実績。</p>
             </div>
             
-            <div className="bg-white p-6 rounded-lg shadow border border-neutral-100">
+            <div className="bg-white p-6 rounded-lg shadow-sm border border-neutral-100">
               <h3 className="text-xl font-bold mb-2 text-primary">数値の見える化</h3>
               <p>リアルタイム BI レポート – Looker Studioで数値を"見える化"。</p>
             </div>
             
-            <div className="bg-white p-6 rounded-lg shadow border border-neutral-100">
+            <div className="bg-white p-6 rounded-lg shadow-sm border border-neutral-100">
               <h3 className="text-xl font-bold mb-2 text-primary">徹底した運用体制</h3>
               <p>サボらない運用体制 – 週次〜月次でPDCA、2〜4週ごとにレポーティング。</p>
             </div>
             
-            <div className="bg-white p-6 rounded-lg shadow border border-neutral-100">
+            <div className="bg-white p-6 rounded-lg shadow-sm border border-neutral-100">
               <h3 className="text-xl font-bold mb-2 text-primary">ワンストップ対応</h3>
               <p>一気通貫サポート – 上流戦略、運用、内製化、研修までワンストップ。</p>
             </div>
             
-            <div className="bg-white p-6 rounded-lg shadow border border-neutral-100">
+            <div className="bg-white p-6 rounded-lg shadow-sm border border-neutral-100">
               <h3 className="text-xl font-bold mb-2 text-primary">成果にコミット</h3>
               <p>具体的な数値成果で、貴社のKPI達成をコミットします。</p>
             </div>
@@ -167,7 +167,7 @@ const ServicesSection = () => {
           </h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-white p-6 rounded-lg shadow border border-neutral-100">
+            <div className="bg-white p-6 rounded-lg shadow-sm border border-neutral-100">
               <div className="bg-primary/10 text-primary font-bold py-1 px-3 rounded inline-block mb-2">
                 美容資格講座
               </div>
@@ -175,7 +175,7 @@ const ServicesSection = () => {
               <p className="text-neutral-600">広告運用の最適化により、投資対効果を大幅に向上させました。</p>
             </div>
             
-            <div className="bg-white p-6 rounded-lg shadow border border-neutral-100">
+            <div className="bg-white p-6 rounded-lg shadow-sm border border-neutral-100">
               <div className="bg-primary/10 text-primary font-bold py-1 px-3 rounded inline-block mb-2">
                 B2B SaaS
               </div>
@@ -183,7 +183,7 @@ const ServicesSection = () => {
               <p className="text-neutral-600">月10件 → 30件超のリード獲得数に増加しました。</p>
             </div>
             
-            <div className="bg-white p-6 rounded-lg shadow border border-neutral-100">
+            <div className="bg-white p-6 rounded-lg shadow-sm border border-neutral-100">
               <div className="bg-primary/10 text-primary font-bold py-1 px-3 rounded inline-block mb-2">
                 人材紹介
               </div>
@@ -191,7 +191,7 @@ const ServicesSection = () => {
               <p className="text-neutral-600">求職者登録数 40%増、広告コスト 15%削減を実現しました。</p>
             </div>
             
-            <div className="bg-white p-6 rounded-lg shadow border border-neutral-100">
+            <div className="bg-white p-6 rounded-lg shadow-sm border border-neutral-100">
               <div className="bg-primary/10 text-primary font-bold py-1 px-3 rounded inline-block mb-2">
                 ファッション EC
               </div>
