@@ -1,43 +1,34 @@
-
 import { useEffect, useRef, useState } from 'react';
 import { Button } from '@/components/ui/button';
-
 const HeroSection = () => {
   const [isAnimated, setIsAnimated] = useState(false);
   const heroRef = useRef<HTMLDivElement>(null);
-
   useEffect(() => {
     setIsAnimated(true);
-    
+
     // Create isometric grid animation background
     const canvas = document.createElement('canvas');
     const ctx = canvas.getContext('2d');
     const heroElement = heroRef.current;
-    
     if (heroElement && ctx) {
       let animationFrameId: number;
-      
       const resizeCanvas = () => {
         canvas.width = heroElement.offsetWidth;
         canvas.height = heroElement.offsetHeight;
       };
-      
       const drawGrid = () => {
         if (!ctx) return;
-        
         ctx.clearRect(0, 0, canvas.width, canvas.height);
-        
+
         // Set grid properties
         const cellSize = 40;
         const lineWidth = 0.3;
         const lineColor = 'rgba(255, 255, 255, 0.1)';
-        
         ctx.strokeStyle = lineColor;
         ctx.lineWidth = lineWidth;
-        
         const time = Date.now() * 0.0005;
         const offset = cellSize * Math.sin(time) * 0.3;
-        
+
         // Draw horizontal lines
         for (let y = 0; y < canvas.height + cellSize; y += cellSize) {
           ctx.beginPath();
@@ -45,7 +36,7 @@ const HeroSection = () => {
           ctx.lineTo(canvas.width, y);
           ctx.stroke();
         }
-        
+
         // Draw vertical lines
         for (let x = 0; x < canvas.width + cellSize; x += cellSize) {
           ctx.beginPath();
@@ -53,10 +44,8 @@ const HeroSection = () => {
           ctx.lineTo(x + offset, canvas.height);
           ctx.stroke();
         }
-        
         animationFrameId = requestAnimationFrame(drawGrid);
       };
-      
       canvas.style.position = 'absolute';
       canvas.style.top = '0';
       canvas.style.left = '0';
@@ -65,14 +54,10 @@ const HeroSection = () => {
       canvas.style.opacity = '0.4';
       canvas.style.zIndex = '1';
       canvas.style.pointerEvents = 'none';
-      
       heroElement.appendChild(canvas);
-      
       resizeCanvas();
       drawGrid();
-      
       window.addEventListener('resize', resizeCanvas);
-      
       return () => {
         window.removeEventListener('resize', resizeCanvas);
         cancelAnimationFrame(animationFrameId);
@@ -82,13 +67,7 @@ const HeroSection = () => {
       };
     }
   }, []);
-
-  return (
-    <section 
-      ref={heroRef}
-      className="relative min-h-[88vh] bg-primary overflow-hidden pt-24"
-      id="hero"
-    >
+  return <section ref={heroRef} className="relative min-h-[88vh] bg-primary overflow-hidden pt-24" id="hero">
       <div className="container mx-auto px-4 md:px-6 h-full flex flex-col justify-center">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center py-16 md:py-24 relative z-10">
           {/* Hero Content */}
@@ -99,11 +78,8 @@ const HeroSection = () => {
             <p className="text-lg md:text-xl text-secondary font-light mb-4">
               With AI, we continue to open doors of possibility.
             </p>
-            <p className="text-base md:text-lg max-w-xl">
-              生成AIの革新的な力で、マーケティング戦略を次のレベルへ。
-              データに基づく洞察と創造性を融合させ、
-              あなたのビジネスの成長を加速させます。
-            </p>
+            <p className="text-base md:text-lg max-w-xl">生成AI × ノーコードで、コスト・人材・時間の壁を壊す。
+中小企業の『やりたい』を支援します。</p>
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
               <Button className="bg-secondary text-neutral-800 hover:bg-secondary-100">
                 無料相談を予約する
@@ -144,8 +120,6 @@ const HeroSection = () => {
       
       {/* Diagonal division */}
       <div className="section-divider purple-to-white"></div>
-    </section>
-  );
+    </section>;
 };
-
 export default HeroSection;
