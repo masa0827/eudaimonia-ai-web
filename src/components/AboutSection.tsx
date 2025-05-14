@@ -5,8 +5,6 @@ import { ArrowRight } from "lucide-react";
 const AboutSection = () => {
   return (
     <section id="about" className="py-16 md:py-24 bg-neutral">
-      <div className="section-divider white-to-gray"></div>
-      
       <div className="container mx-auto px-4 md:px-6 pt-12">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* アイソメトリックチームイラスト */}
@@ -47,6 +45,18 @@ const AboutSection = () => {
             <p className="text-neutral-800">
               テクノロジーの力で人々の「挑戦」を支援したいという想いのもと、私たちは生成AIを活用したマーケティングソリューションを開発。データ解析の正確さと人間の創造性を融合させ、クライアントビジネスの成長を加速させています。
             </p>
+            
+            <div className="mt-6">
+              <div className="bg-white p-4 rounded-lg border border-neutral-200 mb-4">
+                <h3 className="font-bold text-primary mb-2">会社情報</h3>
+                <ul className="space-y-2">
+                  <li><span className="font-medium">社名：</span>株式会社ユーダイモニア</li>
+                  <li><span className="font-medium">所在地：</span>東京都渋谷区道玄坂1-10-8 渋谷道玄坂東急ビル2F-C</li>
+                  <li><span className="font-medium">代表取締役：</span>大塚 賢弘</li>
+                  <li><span className="font-medium">メール：</span>info@eudaimonia.co.jp</li>
+                </ul>
+              </div>
+            </div>
             
             <Button className="bg-primary hover:bg-primary-100 mt-4 flex items-center">
               チームについて詳しく

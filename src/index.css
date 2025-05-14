@@ -111,44 +111,8 @@
     margin: 0 auto;
   }
   
-  .section-divider {
-    position: relative;
-    height: 4rem;
-    overflow: hidden;
-  }
-  
-  .section-divider::before {
-    content: '';
-    position: absolute;
-    width: 150%;
-    height: 150%;
-    transform: rotate(-3deg);
-    top: 75%;
-    left: -25%;
-  }
-  
-  .white-to-gray::before {
-    background-color: #f5f5f5;
-  }
-  
-  .gray-to-white::before {
-    background-color: #ffffff;
-  }
-  
-  .white-to-purple::before {
-    background-color: #2F1676;
-  }
-  
-  .purple-to-white::before {
-    background-color: #ffffff;
-  }
-  
-  .purple-to-gray::before {
-    background-color: #f5f5f5;
-  }
-  
-  .gray-to-purple::before {
-    background-color: #2F1676;
+  .section-container {
+    padding: 4rem 0;
   }
   
   .isometric-card {

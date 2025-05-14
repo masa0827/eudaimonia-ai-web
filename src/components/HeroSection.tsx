@@ -86,14 +86,13 @@ const HeroSection = () => {
           {/* ヒーローコンテンツ */}
           <div className="text-white space-y-6">
             <h1 className={`text-4xl md:text-5xl lg:text-6xl font-bold mb-4 ${isAnimated ? "typed-text animate-typing" : ""}`}>
-              挑戦を、もっと自由に。
+              生成AI × Web広告で、中小企業の"挑戦"をもっと身近に
             </h1>
             <p className="text-lg md:text-xl text-secondary font-light mb-4">
-              With AI, we continue to open doors of possibility.
+              戦略立案から広告運用・内製化・研修まで――
             </p>
             <p className="text-base md:text-lg max-w-xl">
-              生成AI × ノーコードで、コスト・人材・時間の壁を壊す。
-              中小企業の『やりたい』を支援します。
+              AIとノーコードを武器に、御社のデジタルマーケティングを一気通貫で支援します。
             </p>
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
               <Button className="bg-secondary text-neutral-800 hover:bg-secondary-100 flex items-center">
@@ -133,9 +132,6 @@ const HeroSection = () => {
           </div>
         </div>
       </div>
-      
-      {/* 斜めの分割線 */}
-      <div className="section-divider purple-to-white"></div>
     </section>
   );
 };
